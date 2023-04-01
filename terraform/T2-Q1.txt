@@ -1,0 +1,8 @@
+If I had multiple environment, using different cloud providers I would.
+
+Use terraform modules which would be stored in a common-repo, each environment would have its own repository where it can call the modules it needs and
+use its specific provider to provision the infrastructure it needs to opperate. 
+
+I would also use hashicorp vault as method of storing secrets for each environment
+
+so when you run a pipeline for a specifc environment it is able to get any secrets it needs and any modules it need to successfully provision infrastructure on that cloud provider.

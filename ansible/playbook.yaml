@@ -1,0 +1,9 @@
+
+---
+- hosts: all      # Declares which servers the ansible control node will target with this playbook
+  become: true    # States whether all commands will be done with escalated root privileges
+  vars:           # Where you store variables so that you only need to edit them once.
+
+  roles:
+    - setup
+    - install

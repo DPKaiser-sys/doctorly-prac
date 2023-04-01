@@ -1,0 +1,7 @@
+I would monitor multiple ubuntu machines using prometheus, telegraf and grafana
+
+telegraf would have to be installed on all the machines, it will collect metrics from the operating system, running software and any other inputs. The data is then collected by 
+prometheus and stored in some sort of persistant storage. 
+
+I would then have a grafana instance running centrally which will pull data from each of the persistant storage nodes for visulization. It could also handle alerting with the
+prometheus alertmanager plugin.

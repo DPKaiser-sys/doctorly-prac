@@ -1,7 +1,7 @@
-Role Name
+install
 =========
 
-A brief description of the role goes here.
+This will install 2 docker images a .net application and a database
 
 Requirements
 ------------

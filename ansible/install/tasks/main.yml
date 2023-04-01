@@ -1,2 +1,22 @@
 ---
 # tasks file for install
+
+- name: Pull Postgres Image
+  community.docker.docker_image:
+    name: postgres:alpine3.17
+    source: pull
+
+- name: Pull Mono Image
+  community.docker.docker_image:
+    name: mono:6.12.0.182
+    source: pull
+
+- name: Create and start Postgres
+  community.docker.docker_compose:
+    project_src: mydockercompase_directory_postgres
+  registry: output
+
+- name: Create and start mono
+  community.docker.docker_compose:
+    project_src: mydockercompase_directory_mono
+  registry: output
